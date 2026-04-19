@@ -1509,6 +1509,12 @@
       background-image: linear-gradient(var(--tw-gradient-stops));
     }
   }
+  .dark\:bg-gradient-to-r {
+    &:where(.dark, .dark *) {
+      --tw-gradient-position: to right in oklab;
+      background-image: linear-gradient(var(--tw-gradient-stops));
+    }
+  }
   .dark\:from-\[\#1b2341\] {
     &:where(.dark, .dark *) {
       --tw-gradient-from: #1b2341;
@@ -1533,6 +1539,11 @@
       --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
     }
   }
+  .dark\:bg-clip-text {
+    &:where(.dark, .dark *) {
+      background-clip: text;
+    }
+  }
   .dark\:text-gray-200 {
     &:where(.dark, .dark *) {
       color: var(--color-gray-200);
@@ -1546,6 +1557,11 @@
   .dark\:text-gray-400 {
     &:where(.dark, .dark *) {
       color: var(--color-gray-400);
+    }
+  }
+  .dark\:text-transparent {
+    &:where(.dark, .dark *) {
+      color: transparent;
     }
   }
   .dark\:text-white {
