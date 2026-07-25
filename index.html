@@ -4,16 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio | Daffa Lutfianudin</title>
+    <title>Portofolio | Daffa Lutfianudin - Fullstack, Mobile & Game Developer</title>
+    <meta name="description"
+        content="Portofolio resmi Daffa Lutfianudin - Fullstack Developer, Mobile App Developer (Flutter/Dart), C# Desktop Developer, dan Game Developer (Luau/Roblox).">
     <link rel="icon" type="image/png" href="assets/MDLFlogo.png">
     <link href="./dist/output.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
         }
 
-        /* KUNCI 1: Definisi Animasi Kustom untuk Kursor Berkedip */
         @keyframes cursorBlink {
 
             0%,
@@ -30,30 +32,32 @@
             animation: cursorBlink 0.8s infinite;
         }
 
-        /* CSS untuk menyembunyikan scrollbar pada gulir horizontal */
         .hide-scroll-bar {
             -ms-overflow-style: none;
-            /* IE and Edge */
             scrollbar-width: none;
-            /* Firefox */
         }
 
         .hide-scroll-bar::-webkit-scrollbar {
             display: none;
-            /* Chrome, Safari and Opera */
         }
 
         @media (min-width: 1024px) {
             html {
-                font-size: 80%;
+                font-size: 85%;
             }
         }
 
-        /* Skala untuk layar menengah (Tablet) */
         @media (min-width: 768px) and (max-width: 1023px) {
             html {
                 font-size: 90%;
             }
+        }
+
+        .filter-btn.active {
+            background-color: #2563eb;
+            color: #ffffff;
+            border-color: #2563eb;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
         }
     </style>
 </head>
@@ -61,694 +65,667 @@
 <body
     class="bg-gray-50 dark:bg-[#050505] text-gray-900 dark:text-white min-h-screen relative overflow-x-hidden w-full max-w-[100vw] flex flex-col transition-colors duration-300">
 
+    <!-- Background Ambient Glow -->
     <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
         <div
             class="absolute -top-[10%] -left-[10%] w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-purple-900/20 blur-[100px] md:blur-[120px] rounded-full">
         </div>
-
         <div
             class="absolute -bottom-[10%] -right-[10%] w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-blue-900/20 blur-[100px] md:blur-[120px] rounded-full">
         </div>
     </div>
-    <!-- Header -->
-    <nav
-        class="fixed top-0 left-0 z-[100] flex justify-between items-center px-4 md:px-12 lg:px-16 py-4 md:py-6 w-full bg-transparent backdrop-blur-md border-b border-gray-200 dark:border-white/10 transition-all duration-300">
 
-        <a href="#" class="text-gray-900 dark:text-white hover:text-blue-600 transition-colors duration-300">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 md:h-11 md:w-11" viewBox="0 0 20 20"
-                fill="currentColor">
-                <path
-                    d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
-            </svg>
+    <!-- Header Navigation -->
+    <nav
+        class="fixed top-0 left-0 z-[100] flex justify-between items-center px-4 md:px-12 lg:px-16 py-4 md:py-6 w-full bg-white/70 dark:bg-[#050505]/70 backdrop-blur-md border-b border-gray-200 dark:border-white/10 transition-all duration-300">
+
+        <a href="#home"
+            class="flex items-center gap-3 text-gray-900 dark:text-white hover:text-blue-600 transition-colors duration-300">
+            <img src="assets/MDLFlogo.png" alt="MDLF Logo" class="h-9 w-9 object-contain">
+            <span
+                class="font-bold text-lg tracking-wider hidden sm:inline-block bg-gradient-to-r from-purple-500 to-blue-600 bg-clip-text text-transparent">DAFFA</span>
         </a>
 
         <div
-            class="flex bg-white/80 dark:bg-white/5 backdrop-blur-md border border-gray-200 dark:border-white/10 px-4 py-2 md:px-10 md:py-4 rounded-full gap-4 md:gap-8 shadow-lg absolute left-1/2 -translate-x-1/2 w-max max-w-[95vw]">
+            class="flex bg-white/80 dark:bg-white/5 backdrop-blur-md border border-gray-200 dark:border-white/10 px-4 py-2 md:px-8 md:py-3 rounded-full gap-3 md:gap-6 shadow-lg absolute left-1/2 -translate-x-1/2 w-max max-w-[95vw]">
             <a href="#about"
-                class="text-xs md:text-base font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-transparent dark:hover:bg-clip-text dark:hover:bg-gradient-to-r dark:hover:from-purple-500 dark:hover:to-blue-600 transition-all">About</a>
-            <a href="#contact"
-                class="text-xs md:text-base font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-transparent dark:hover:bg-clip-text dark:hover:bg-gradient-to-r dark:hover:from-purple-500 dark:hover:to-blue-600 transition-all">Contact</a>
-            <a href="#portofolio"
-                class="text-xs md:text-base font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-transparent dark:hover:bg-clip-text dark:hover:bg-gradient-to-r dark:hover:from-purple-500 dark:hover:to-blue-600 transition-all">Project</a>
+                class="text-xs md:text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-all">About</a>
             <a href="#skill"
-                class="text-xs md:text-base font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-transparent dark:hover:bg-clip-text dark:hover:bg-gradient-to-r dark:hover:from-purple-500 dark:hover:to-blue-600 transition-all">Skill</a>
+                class="text-xs md:text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-all">Skills</a>
+            <a href="#portofolio"
+                class="text-xs md:text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-all">Projects</a>
+            <a href="#contact"
+                class="text-xs md:text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-all">Contact</a>
         </div>
 
-        <button id="theme-toggle" type="button"
-            class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg text-sm p-2 transition-colors">
-            <svg id="theme-toggle-light-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+        <button id="theme-toggle" type="button" aria-label="Toggle theme"
+            class="text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800 focus:outline-none rounded-xl text-sm p-2.5 transition-colors border border-gray-300 dark:border-white/10">
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                 <path
                     d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z">
                 </path>
             </svg>
-            <svg id="theme-toggle-dark-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
             </svg>
         </button>
     </nav>
 
-    <!-- Hero section -->
+    <!-- Hero Section -->
     <main id="home"
-        class="relative z-10 flex flex-col items-center justify-center flex-grow px-4 pt-24 text-center min-h-screen">
+        class="relative z-10 flex flex-col items-center justify-center flex-grow px-4 pt-28 pb-16 text-center min-h-screen">
+        <div
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-sm font-medium mb-6">
+            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+            Available for Freelance & Collaboration
+        </div>
+
         <h1
-            class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold tracking-wide flex flex-wrap items-center justify-center text-center gap-x-2 gap-y-1">
-            Hello I am a
+            class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight flex flex-wrap items-center justify-center text-center gap-x-3 gap-y-2">
+            Hello, I am a
             <span class="flex items-center">
                 <span id="typing-text"
-                    class="pb-1 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-600"></span>
+                    class="pb-1 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-400"></span>
                 <span id="typing-cursor"
-                    class="text-white font-mono text-4xl sm:text-5xl md:text-6xl lg:text-7xl animate-cursor-blink ml-1">|</span>
+                    class="text-blue-500 font-mono text-4xl sm:text-5xl md:text-6xl lg:text-7xl animate-cursor-blink ml-1">|</span>
             </span>
         </h1>
 
         <div
-            class="w-[70%] sm:w-[350px] md:w-[600px] lg:w-[700px] h-[3px] md:h-[4px] mt-4 md:mt-6 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full transition-all duration-300">
+            class="w-[70%] sm:w-[350px] md:w-[600px] lg:w-[700px] h-[3px] md:h-[4px] mt-6 bg-gradient-to-r from-purple-500 via-blue-600 to-cyan-400 rounded-full">
         </div>
 
-        <p class="mt-6 text-xl md:text-2xl text-gray-700 dark:text-gray-300  max-w-2xl leading-relaxed">
-            Building Your Dream, Business and<br />Game start your dream now
+        <p class="mt-6 text-lg sm:text-xl md:text-2xl text-gray-700 dark:text-gray-300 max-w-3xl leading-relaxed">
+            Building Digital Experiences: Mobile Apps, Web Applications & Immersive Games. Turning complex ideas into
+            functional, aesthetic software.
         </p>
 
-        <a href="https://wa.me/6285180606949" target="_blank" rel="noopener noreferrer"
-            class="mt-10 bg-[#163a8a] hover:bg-purple-700 text-white font-medium px-10 py-3 rounded-full transition-all duration-300 shadow-[0_4px_20px_rgba(22,58,138,0.4)] hover:shadow-[0_4px_25px_rgba(22,58,138,0.6)]">
-            Hire Me Now
-        </a>
-
+        <div class="flex flex-wrap items-center justify-center gap-4 mt-10">
+            <a href="#contact"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3.5 rounded-full transition-all duration-300 shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 hover:-translate-y-0.5">
+                Get In Touch
+            </a>
+            <a href="#portofolio"
+                class="bg-white/80 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10 text-gray-900 dark:text-white font-semibold px-8 py-3.5 rounded-full border border-gray-300 dark:border-white/10 transition-all duration-300 hover:-translate-y-0.5">
+                Explore Projects
+            </a>
+        </div>
     </main>
 
     <!-- Section About -->
-    <section id="about" class="relative z-10 max-w-6xl mx-auto px-6 py-24 w-full scroll-mt-32">
+    <section id="about" class="relative z-10 max-w-6xl mx-auto px-6 py-20 w-full scroll-mt-24">
 
-        <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">About Me</h2>
+        <h2 class="text-3xl md:text-5xl font-bold text-center mb-4 text-gray-900 dark:text-white">About Me</h2>
+        <p class="text-gray-600 dark:text-gray-400 text-center max-w-xl mx-auto mb-12">Learn more about my background,
+            passion, and expertise</p>
 
-        <div class="mb-16 max-w-max mx-auto">
-            <h3 class="text-xl text-gray-700 dark:text-gray-300 mb-4 font-medium">Programmer | Game Developer | Tech
-                Enthusiast</h3>
-            <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-lg text-justify md:text-left">
-                Bridging the visual creativity of a graphic design background with the deep logic of software
-                architecture.
-                I am an Information Systems student at Amikom Purwokerto specializing in Mobile Development
-                (Flutter/Dart),
-                Game Scripting & 3D Modeling (Luau, Blender), and Data Science (Python). Always eager to turn complex
-                ideas
-                into functional, aesthetic digital products.
+        <div
+            class="mb-14 max-w-4xl mx-auto bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-3xl p-8 shadow-xl">
+            <h3
+                class="text-xl sm:text-2xl text-blue-600 dark:text-blue-400 mb-4 font-semibold text-center md:text-left">
+                Programmer | Mobile & Web Developer | Game Developer
+            </h3>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-base md:text-lg text-justify md:text-left">
+                Bridging visual creativity with deep software logic. I am an Information Systems student at Amikom
+                Purwokerto specializing in
+                <strong class="text-gray-900 dark:text-white">Mobile Development (Flutter/Dart)</strong>,
+                <strong class="text-gray-900 dark:text-white">Desktop Development (C#/.NET)</strong>,
+                <strong class="text-gray-900 dark:text-white">Web Development (Next.js/Laravel/Tailwind)</strong>,
+                <strong class="text-gray-900 dark:text-white">Data Science (Python)</strong>, and
+                <strong class="text-gray-900 dark:text-white">Game Scripting & 3D Modeling (Luau, Blender)</strong>.
+                Always eager to build high-performance, aesthetic digital products that solve real-world problems.
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-
-            <div>
-                <h3 class="text-3xl font-bold mb-8">Personal Details</h3>
-                <ul class="space-y-5">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            <!-- Personal Details -->
+            <div
+                class="bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-3xl p-8 shadow-xl">
+                <h3 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Personal Info</h3>
+                <ul class="space-y-4">
                     <li class="flex items-center">
-                        <span class="w-36 text-blue-600 font-medium text-lg">Social Media</span>
-                        <span class="text-gray-700 dark:text-gray-300 text-lg">@dafaltfndn</span>
+                        <span class="w-32 text-blue-600 dark:text-blue-400 font-semibold text-base">Social Media</span>
+                        <span class="text-gray-700 dark:text-gray-300 text-base">@dafaltfndn</span>
                     </li>
                     <li class="flex items-center">
-                        <span class="w-36 text-blue-600 font-medium text-lg">Phone</span>
-                        <span class="text-gray-700 dark:text-gray-300 text-lg">+6285180606949</span>
+                        <span class="w-32 text-blue-600 dark:text-blue-400 font-semibold text-base">Email</span>
+                        <a href="mailto:012dafa@gmail.com"
+                            class="text-gray-700 dark:text-gray-300 text-base hover:text-blue-500 transition-colors">012dafa@gmail.com</a>
                     </li>
                     <li class="flex items-center">
-                        <span class="w-36 text-blue-600 font-medium text-lg">Email</span>
-                        <span class="text-gray-700 dark:text-gray-300 text-lg">012dafa@gmail.com</span>
+                        <span class="w-32 text-blue-600 dark:text-blue-400 font-semibold text-base">Discord</span>
+                        <span class="text-gray-700 dark:text-gray-300 text-base font-mono">@zyx_fl1ck</span>
                     </li>
                     <li class="flex items-center">
-                        <span class="w-36 text-blue-600 font-medium text-lg">Website</span>
-                        <span class="text-gray-700 dark:text-gray-300 text-lg">www.dafacode.com</span>
+                        <span class="w-32 text-blue-600 dark:text-blue-400 font-semibold text-base">Website</span>
+                        <span class="text-gray-700 dark:text-gray-300 text-base">www.dafacode.com</span>
                     </li>
                 </ul>
             </div>
 
-            <div>
-                <h3 class="text-3xl font-bold mb-8">My Interest</h3>
-                <div
-                    class="bg-white/30 dark:bg-white/5 backdrop-blur-xl border border-white/50 dark:border-white/10 rounded-2xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.4)] transition-all duration-300">
+            <!-- My Interests / Roles -->
+            <div
+                class="bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-3xl p-8 shadow-xl">
+                <h3 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Core Expertise</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span
+                        class="bg-blue-600/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 px-4 py-2 rounded-full text-sm font-medium">Mobile
+                        App Dev (Flutter)</span>
+                    <span
+                        class="bg-purple-600/10 text-purple-600 dark:text-purple-400 border border-purple-500/20 px-4 py-2 rounded-full text-sm font-medium">Web
+                        Development</span>
+                    <span
+                        class="bg-cyan-600/10 text-cyan-600 dark:text-cyan-400 border border-cyan-500/20 px-4 py-2 rounded-full text-sm font-medium">C#
+                        Desktop Apps</span>
+                    <span
+                        class="bg-green-600/10 text-green-600 dark:text-green-400 border border-green-500/20 px-4 py-2 rounded-full text-sm font-medium">Game
+                        Development (Luau)</span>
+                    <span
+                        class="bg-orange-600/10 text-orange-600 dark:text-orange-400 border border-orange-500/20 px-4 py-2 rounded-full text-sm font-medium">Graphic
+                        & UI/UX Design</span>
+                    <span
+                        class="bg-pink-600/10 text-pink-600 dark:text-pink-400 border border-pink-500/20 px-4 py-2 rounded-full text-sm font-medium">3D
+                        Modeling (Blender)</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-4">
+    <!-- Section Skills & Tech Stack -->
+    <section id="skill" class="relative z-10 max-w-6xl mx-auto px-6 py-20 w-full scroll-mt-24">
 
-                        <div class="flex items-center gap-4">
-                            <svg class="w-7 h-7 text-gray-800 dark:text-gray-200" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z">
-                                </path>
-                            </svg>
-                            <span
-                                class="bg-[#163a8a] text-white px-5 py-2.5 rounded-full text-sm font-medium shadow-md hover:bg-blue-800 transition-colors cursor-default">Graphic
-                                Designer</span>
-                        </div>
+        <h2 class="text-3xl md:text-5xl font-bold text-center mb-4">Skills & Tech Stack</h2>
+        <p class="text-gray-600 dark:text-gray-400 text-center max-w-xl mx-auto mb-14">Tools, frameworks, and
+            technologies I work with</p>
 
-                        <div class="flex items-center gap-4">
-                            <svg class="w-7 h-7 text-gray-800 dark:text-gray-200" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                                </path>
-                            </svg>
-                            <span
-                                class="bg-[#163a8a] text-white px-5 py-2.5 rounded-full text-sm font-medium shadow-md hover:bg-blue-800 transition-colors cursor-default">Web
-                                Development</span>
-                        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-                        <div class="flex items-center gap-4">
-                            <svg class="w-7 h-7 text-gray-800 dark:text-gray-200" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z">
-                                </path>
-                            </svg>
-                            <span
-                                class="bg-[#163a8a] text-white px-5 py-2.5 rounded-full text-sm font-medium shadow-md hover:bg-blue-800 transition-colors cursor-default">Game
-                                Developer</span>
-                        </div>
+            <!-- Mobile & Desktop -->
+            <div
+                class="bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-2xl p-6 shadow-lg hover:border-blue-500/40 transition-all">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="p-2.5 rounded-xl bg-blue-500/10 text-blue-500">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
                     </div>
+                    <h3 class="text-lg font-bold">Mobile & Desktop</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span
+                        class="px-3 py-1.5 rounded-lg bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-semibold">Flutter</span>
+                    <span
+                        class="px-3 py-1.5 rounded-lg bg-sky-500/10 text-sky-600 dark:text-sky-400 text-xs font-semibold">Dart</span>
+                    <span
+                        class="px-3 py-1.5 rounded-lg bg-purple-500/10 text-purple-600 dark:text-purple-400 text-xs font-semibold">C#
+                        (.NET)</span>
+                    <span
+                        class="px-3 py-1.5 rounded-lg bg-yellow-500/10 text-yellow-600 dark:text-yellow-400 text-xs font-semibold">Python</span>
+                </div>
+            </div>
+
+            <!-- Web Development -->
+            <div
+                class="bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-2xl p-6 shadow-lg hover:border-purple-500/40 transition-all">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="p-2.5 rounded-xl bg-purple-500/10 text-purple-500">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold">Web Dev</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span
+                        class="px-3 py-1.5 rounded-lg bg-gray-500/10 text-gray-800 dark:text-gray-200 text-xs font-semibold">Next.js</span>
+                    <span
+                        class="px-3 py-1.5 rounded-lg bg-red-500/10 text-red-600 dark:text-red-400 text-xs font-semibold">Laravel</span>
+                    <span
+                        class="px-3 py-1.5 rounded-lg bg-amber-500/10 text-amber-600 dark:text-amber-400 text-xs font-semibold">JavaScript</span>
+                    <span
+                        class="px-3 py-1.5 rounded-lg bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 text-xs font-semibold">Tailwind
+                        CSS</span>
+                </div>
+            </div>
+
+            <!-- Game Dev & 3D -->
+            <div
+                class="bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-2xl p-6 shadow-lg hover:border-cyan-500/40 transition-all">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="p-2.5 rounded-xl bg-cyan-500/10 text-cyan-500">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold">Game Dev & 3D</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span
+                        class="px-3 py-1.5 rounded-lg bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-semibold">Luau
+                        / Lua</span>
+                    <span
+                        class="px-3 py-1.5 rounded-lg bg-gray-500/10 text-gray-900 dark:text-white text-xs font-semibold">Roblox
+                        Studio</span>
+                    <span
+                        class="px-3 py-1.5 rounded-lg bg-orange-500/10 text-orange-600 dark:text-orange-400 text-xs font-semibold">Blender
+                        3D</span>
+                </div>
+            </div>
+
+            <!-- Design & Tools -->
+            <div
+                class="bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-2xl p-6 shadow-lg hover:border-pink-500/40 transition-all">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="p-2.5 rounded-xl bg-pink-500/10 text-pink-500">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold">Design Suite</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span
+                        class="px-3 py-1.5 rounded-lg bg-pink-500/10 text-pink-600 dark:text-pink-400 text-xs font-semibold">Figma</span>
+                    <span
+                        class="px-3 py-1.5 rounded-lg bg-blue-600/10 text-blue-500 text-xs font-semibold">Photoshop</span>
+                    <span
+                        class="px-3 py-1.5 rounded-lg bg-green-500/10 text-green-600 dark:text-green-400 text-xs font-semibold">CorelDRAW</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Education & Experience Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            <div
+                class="bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-2xl p-6 shadow-lg">
+                <h3 class="text-xl font-bold mb-4 flex items-center gap-2 text-blue-600 dark:text-blue-400">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z">
+                        </path>
+                    </svg>
+                    Education
+                </h3>
+                <ul class="space-y-3 text-gray-700 dark:text-gray-300">
+                    <li class="border-l-2 border-blue-500 pl-4 py-1">
+                        <p class="font-semibold text-gray-900 dark:text-white">University Amikom Purwokerto</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">S1 Information Systems</p>
+                    </li>
+                    <li class="border-l-2 border-purple-500 pl-4 py-1">
+                        <p class="font-semibold text-gray-900 dark:text-white">SMA Sinar Islam Asia Pasific</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">High School Graduate</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div
+                class="bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-2xl p-6 shadow-lg">
+                <h3 class="text-xl font-bold mb-4 flex items-center gap-2 text-purple-600 dark:text-purple-400">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                        </path>
+                    </svg>
+                    Experience
+                </h3>
+                <ul class="space-y-3 text-gray-700 dark:text-gray-300">
+                    <li class="border-l-2 border-purple-500 pl-4 py-1">
+                        <p class="font-semibold text-gray-900 dark:text-white">Freelance Software & Game Developer</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">2024 - Present</p>
+                    </li>
+                    <li class="border-l-2 border-cyan-500 pl-4 py-1">
+                        <p class="font-semibold text-gray-900 dark:text-white">Social Media Specialist - BCD Studio
+                            Creative</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Part-Time</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Section Portfolio Projects -->
+    <section id="portofolio" class="relative z-10 max-w-7xl mx-auto px-4 md:px-6 py-20 w-full scroll-mt-24">
+
+        <h2 class="text-3xl md:text-5xl font-bold text-center mb-4">Portfolio Showcase</h2>
+        <p class="text-gray-600 dark:text-gray-400 text-center max-w-xl mx-auto mb-8">Selected projects in Mobile Apps,
+            Web Platforms, Desktop Software & Game Dev</p>
+
+        <!-- Category Filter Buttons -->
+        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-10">
+            <button
+                class="filter-btn active px-5 py-2 rounded-full border border-gray-300 dark:border-white/10 text-sm font-medium transition-all"
+                data-filter="all">All Projects</button>
+            <button
+                class="filter-btn px-5 py-2 rounded-full border border-gray-300 dark:border-white/10 text-sm font-medium text-gray-700 dark:text-gray-300 hover:border-blue-500 transition-all"
+                data-filter="mobile-desktop">Mobile & Desktop</button>
+            <button
+                class="filter-btn px-5 py-2 rounded-full border border-gray-300 dark:border-white/10 text-sm font-medium text-gray-700 dark:text-gray-300 hover:border-blue-500 transition-all"
+                data-filter="web">Web Dev</button>
+            <button
+                class="filter-btn px-5 py-2 rounded-full border border-gray-300 dark:border-white/10 text-sm font-medium text-gray-700 dark:text-gray-300 hover:border-blue-500 transition-all"
+                data-filter="game">Game Dev</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- PROJECT 1: PlayStore Mobile App (Flutter) -->
+            <div class="project-card flex flex-col bg-white/80 dark:bg-[#121629] p-6 rounded-2xl border border-gray-200 dark:border-white/10 hover:-translate-y-1.5 transition-all duration-300 shadow-xl"
+                data-category="mobile-desktop">
+                <div
+                    class="w-full h-44 bg-gradient-to-br from-blue-600 to-indigo-900 rounded-xl mb-4 overflow-hidden relative group flex items-center justify-center p-4">
+                    <div class="text-center text-white">
+                        <div
+                            class="w-14 h-14 mx-auto mb-2 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center text-2xl font-bold">
+                            📱</div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-white/20 rounded-full">Google Play Store</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2 mb-2">
+                    <span
+                        class="text-[11px] font-bold tracking-wider uppercase px-2.5 py-0.5 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400">Mobile
+                        App</span>
+                    <span class="text-xs text-gray-500 dark:text-gray-400 font-mono">Flutter / Dart</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Mbah Guru - Educational & Quiz App</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed flex-grow text-justify mb-4">
+                    A feature-rich educational quiz application published on Google Play Store. Engineered with Flutter,
+                    real-time quiz scoring logic, clean UI architecture, state management, and Google AdMob monetization
+                    integration.
+                </p>
+                <div class="pt-4 border-t border-gray-200 dark:border-white/10 flex items-center justify-between">
+                    <span class="text-xs font-semibold text-gray-500 dark:text-gray-400">Published App</span>
+                    <a href="https://play.google.com" target="_blank"
+                        class="text-xs font-bold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1">
+                        View Play Store <span>↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- PROJECT 2: Web Psikologi (Semardaya) -->
+            <div class="project-card flex flex-col bg-white/80 dark:bg-[#121629] p-6 rounded-2xl border border-gray-200 dark:border-white/10 hover:-translate-y-1.5 transition-all duration-300 shadow-xl"
+                data-category="web">
+                <div
+                    class="w-full h-44 bg-gradient-to-br from-teal-700 to-emerald-900 rounded-xl mb-4 overflow-hidden relative group flex items-center justify-center p-2">
+                    <img src="assets/logosemardaya.png" alt="Semardaya Web Psikologi"
+                        class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="flex items-center gap-2 mb-2">
+                    <span
+                        class="text-[11px] font-bold tracking-wider uppercase px-2.5 py-0.5 rounded-full bg-teal-500/10 text-teal-600 dark:text-teal-400">Web
+                        Application</span>
+                    <span class="text-xs text-gray-500 dark:text-gray-400 font-mono">Tailwind / JS</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Semardaya - Web Psikologi</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed flex-grow text-justify mb-4">
+                    Platform web konsultasi dan asesmen psikologi interaktif. Dirancang dengan antarmuka pengguna yang
+                    ramah, sistem konsultasi terstruktur, serta desain visual yang tenang dan profesional.
+                </p>
+                <div class="pt-4 border-t border-gray-200 dark:border-white/10 flex items-center justify-between">
+                    <span class="text-xs font-semibold text-gray-500 dark:text-gray-400">Web Platform</span>
+                    <a href="https://www.dafacode.com" target="_blank"
+                        class="text-xs font-bold text-teal-600 dark:text-teal-400 hover:underline flex items-center gap-1">
+                        Visit Web <span>↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- PROJECT 3: Windows Desktop App (C#) -->
+            <div class="project-card flex flex-col bg-white/80 dark:bg-[#121629] p-6 rounded-2xl border border-gray-200 dark:border-white/10 hover:-translate-y-1.5 transition-all duration-300 shadow-xl"
+                data-category="mobile-desktop">
+                <div
+                    class="w-full h-44 bg-gradient-to-br from-purple-800 to-slate-900 rounded-xl mb-4 overflow-hidden relative group flex items-center justify-center p-4">
+                    <div class="text-center text-white">
+                        <div
+                            class="w-14 h-14 mx-auto mb-2 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center text-2xl font-bold">
+                            💻</div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-white/20 rounded-full">Windows App</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2 mb-2">
+                    <span
+                        class="text-[11px] font-bold tracking-wider uppercase px-2.5 py-0.5 rounded-full bg-purple-500/10 text-purple-600 dark:text-purple-400">Desktop
+                        Software</span>
+                    <span class="text-xs text-gray-500 dark:text-gray-400 font-mono">C# / .NET</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Custom C# Windows Application</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed flex-grow text-justify mb-4">
+                    High-performance Windows desktop application built with C# and .NET Framework. Features structured
+                    database management, clean desktop UI, and efficient system integration.
+                </p>
+                <div class="pt-4 border-t border-gray-200 dark:border-white/10 flex items-center justify-between">
+                    <span class="text-xs font-semibold text-gray-500 dark:text-gray-400">Desktop App</span>
+                    <a href="#contact"
+                        class="text-xs font-bold text-purple-600 dark:text-purple-400 hover:underline flex items-center gap-1">
+                        Inquire Details <span>↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- PROJECT 4: Dangerous Club (Roblox) -->
+            <div class="project-card flex flex-col bg-white/80 dark:bg-[#121629] p-6 rounded-2xl border border-gray-200 dark:border-white/10 hover:-translate-y-1.5 transition-all duration-300 shadow-xl"
+                data-category="game">
+                <div
+                    class="w-full h-44 bg-gray-800 rounded-xl mb-4 overflow-hidden relative group flex items-center justify-center">
+                    <img src="assets/DC.png" alt="Dangerous Club"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="flex items-center gap-2 mb-2">
+                    <span
+                        class="text-[11px] font-bold tracking-wider uppercase px-2.5 py-0.5 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400">Roblox
+                        Game</span>
+                    <span class="text-xs text-gray-500 dark:text-gray-400 font-mono">Luau Scripting</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Dangerous Club</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed flex-grow text-justify mb-4">
+                    Sebuah club interaktif dengan sistem hiburan tingkat lanjut. Dibangun menggunakan Luau scripting
+                    untuk logika sistem, pemutar musik sinkron, pencahayaan dinamis, serta GUI kustom.
+                </p>
+                <div class="pt-4 border-t border-gray-200 dark:border-white/10 flex items-center justify-between">
+                    <span class="text-xs font-semibold text-gray-500 dark:text-gray-400">Roblox Place</span>
+                    <a href="https://www.roblox.com/id/games/119104656867067/DANGEROUS-CLUB-18" target="_blank"
+                        class="text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:underline flex items-center gap-1">
+                        Play Game <span>↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- PROJECT 5: Mount Jagatamu (Roblox) -->
+            <div class="project-card flex flex-col bg-white/80 dark:bg-[#121629] p-6 rounded-2xl border border-gray-200 dark:border-white/10 hover:-translate-y-1.5 transition-all duration-300 shadow-xl"
+                data-category="game">
+                <div
+                    class="w-full h-44 bg-gray-800 rounded-xl mb-4 overflow-hidden relative group flex items-center justify-center">
+                    <img src="assets/MJ.png" alt="Mount Jagatamu"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="flex items-center gap-2 mb-2">
+                    <span
+                        class="text-[11px] font-bold tracking-wider uppercase px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-600 dark:text-cyan-400">3D
+                        Asset & Mount</span>
+                    <span class="text-xs text-gray-500 dark:text-gray-400 font-mono">Blender / Luau</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Mount Jagatamu V1</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed flex-grow text-justify mb-4">
+                    Mount eksklusif berwujud roh pelindung. Dikembangkan menggunakan 3D Modeling (Blender), efek
+                    partikel api mistis Hitodama, dan mekanisme pergerakan (Riding System).
+                </p>
+                <div class="pt-4 border-t border-gray-200 dark:border-white/10 flex items-center justify-between">
+                    <span class="text-xs font-semibold text-gray-500 dark:text-gray-400">Roblox Asset</span>
+                    <a href="https://www.roblox.com/games/74927519912981/MOUNT-JAGATAMU-V1" target="_blank"
+                        class="text-xs font-bold text-cyan-600 dark:text-cyan-400 hover:underline flex items-center gap-1">
+                        View Item <span>↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- PROJECT 6: Jurassic Obstacle (Roblox) -->
+            <div class="project-card flex flex-col bg-white/80 dark:bg-[#121629] p-6 rounded-2xl border border-gray-200 dark:border-white/10 hover:-translate-y-1.5 transition-all duration-300 shadow-xl"
+                data-category="game">
+                <div
+                    class="w-full h-44 bg-gray-800 rounded-xl mb-4 overflow-hidden relative group flex items-center justify-center">
+                    <img src="assets/JS.png" alt="Jurassic Obstacle"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="flex items-center gap-2 mb-2">
+                    <span
+                        class="text-[11px] font-bold tracking-wider uppercase px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">Roblox
+                        Obby</span>
+                    <span class="text-xs text-gray-500 dark:text-gray-400 font-mono">Luau Physics</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Jurassic Obstacle</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed flex-grow text-justify mb-4">
+                    Game balap rintangan bertema prasejarah di area pegunungan raksasa. Menitikberatkan pada desain
+                    level interaktif dan mekanika fisika kendaraan menggunakan Luau.
+                </p>
+                <div class="pt-4 border-t border-gray-200 dark:border-white/10 flex items-center justify-between">
+                    <span class="text-xs font-semibold text-gray-500 dark:text-gray-400">Roblox Game</span>
+                    <a href="https://www.roblox.com/games/101174909955302/JURASSIC-OBSTACLE" target="_blank"
+                        class="text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1">
+                        Play Game <span>↗</span>
+                    </a>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <!-- section contact -->
-    <!-- section contact -->
-    <section id="contact" class="relative z-10 max-w-6xl mx-auto px-6 py-24 w-full scroll-mt-32">
+    <!-- Section Contact -->
+    <section id="contact" class="relative z-10 max-w-6xl mx-auto px-6 py-20 w-full scroll-mt-24">
 
-        <div
-            class="absolute top-1/2 left-0 w-[400px] h-[400px] bg-purple-900/10 blur-[100px] rounded-full pointer-events-none">
-        </div>
+        <h2 class="text-3xl md:text-5xl font-bold text-center mb-4">Get In Touch</h2>
+        <p class="text-gray-600 dark:text-gray-400 text-center max-w-xl mx-auto mb-14">Have a project in mind or want to
+            collaborate? Feel free to reach out anytime!</p>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
 
-            <!-- BAGIAN KIRI: Teks & Info Discord -->
-            <div class="pt-4 flex flex-col h-full">
-                <h2
-                    class="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white transition-colors duration-300">
-                    Get In Touch</h2>
-                <p
-                    class="text-xl text-gray-700 dark:text-gray-300 leading-relaxed font-light mb-10 transition-colors duration-300">
-                    "Whatever you have a specific project in mind or just want to connect, feel free to reach out.
-                    Always
-                    excited to collaborate on new ideas."
-                </p>
+            <!-- Left Box: Contact Channels -->
+            <div class="space-y-6">
+                <div
+                    class="bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-2xl p-6 shadow-lg">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-blue-600 p-3 rounded-xl text-white flex-shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500 dark:text-gray-400 font-semibold uppercase tracking-wider">
+                                Email Address</p>
+                            <a href="mailto:012dafa@gmail.com"
+                                class="text-lg font-bold text-gray-900 dark:text-white hover:text-blue-500 transition-colors">012dafa@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
 
-                <!-- Kotak Informasi Discord -->
-                <div class="space-y-4 mt-auto">
-                    <h3
-                        class="text-lg font-medium text-gray-600 dark:text-gray-400 mb-2 transition-colors duration-300">
-                        Also Reachable On:</h3>
-
-                    <!-- 1. Username Discord (Bisa disalin) -->
-                    <div
-                        class="flex items-center gap-4 p-4 rounded-2xl bg-blue-50/50 dark:bg-white/5 border border-blue-100 dark:border-white/10 transition-all duration-300 hover:shadow-md">
-                        <div class="bg-[#5865F2] p-3 rounded-xl flex-shrink-0">
-                            <!-- Ikon Discord -->
-                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
+                <div
+                    class="bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-2xl p-6 shadow-lg">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-[#5865F2] p-3 rounded-xl text-white flex-shrink-0">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z" />
                             </svg>
                         </div>
                         <div>
-                            <p class="text-sm text-gray-500 dark:text-gray-400 font-medium">Personal Discord</p>
-                            <!-- UBAH @username_anda DI BAWAH INI -->
-                            <p class="text-lg font-bold text-gray-900 dark:text-white select-all">@zyx_fl1ck</p>
-                        </div>
-                    </div>
-
-                    <!-- 2. Tombol Server Store (Link yang bisa diklik) -->
-                    <!-- UBAH href="#" MENJADI LINK SERVER DISCORD ANDA -->
-                    <a href="https://discord.gg/nZk79zAfc" target="_blank"
-                        class="flex items-center gap-4 p-4 rounded-2xl bg-blue-50/50 dark:bg-white/5 border border-blue-100 dark:border-white/10 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group cursor-pointer">
-                        <div
-                            class="bg-[#5865F2] p-3 rounded-xl flex-shrink-0 group-hover:bg-[#4752C4] transition-colors">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1">
-                                </path>
-                            </svg>
-                        </div>
-                        <div>
-                            <p class="text-sm text-gray-500 dark:text-gray-400 font-medium">My Store Server</p>
-                            <!-- UBAH NAMA SERVER DI BAWAH INI JIKA PERLU -->
-                            <p
-                                class="text-lg font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors flex items-center gap-2">
-                                Join Server <span class="text-xl">↗</span>
+                            <p class="text-xs text-gray-500 dark:text-gray-400 font-semibold uppercase tracking-wider">
+                                Discord Handle</p>
+                            <p class="text-lg font-bold text-gray-900 dark:text-white font-mono select-all">@zyx_fl1ck
                             </p>
                         </div>
-                    </a>
+                    </div>
                 </div>
+
+                <a href="https://discord.gg/nZk79zAfc" target="_blank"
+                    class="block bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-2xl p-6 shadow-lg hover:border-blue-500/40 transition-all group">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="bg-[#5865F2] p-3 rounded-xl text-white group-hover:bg-[#4752C4] transition-colors">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p
+                                    class="text-xs text-gray-500 dark:text-gray-400 font-semibold uppercase tracking-wider">
+                                    Discord Community</p>
+                                <p
+                                    class="text-lg font-bold text-gray-900 dark:text-white group-hover:text-blue-500 transition-colors">
+                                    Join Store Server ↗</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </div>
 
-            <!-- BAGIAN KANAN: Form Email -->
-            <div>
-                <form action="https://formsubmit.co/012dafa@gmail.com" method="POST" class="space-y-6">
-
+            <!-- Right Box: Contact Form -->
+            <div
+                class="bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-2xl p-8 shadow-xl">
+                <form action="https://formsubmit.co/012dafa@gmail.com" method="POST" class="space-y-5">
                     <input type="hidden" name="_subject" value="Pesan Baru dari Web Portofolio!">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_template" value="table">
 
                     <div>
-                        <label for="name"
-                            class="block text-lg font-medium text-gray-900 dark:text-gray-300 mb-2 transition-colors duration-300">Name</label>
+                        <label for="name" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Your
+                            Name</label>
                         <input type="text" id="name" name="name" required
-                            class="w-full bg-white/50 dark:bg-white/5 border border-gray-300 dark:border-white/10 rounded-2xl px-5 py-3 text-gray-800 dark:text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:bg-white dark:focus:bg-white/10 transition-all duration-300 shadow-sm"
+                            class="w-full bg-white dark:bg-white/5 border border-gray-300 dark:border-white/10 rounded-xl px-4 py-3 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-all"
                             placeholder="John Doe">
                     </div>
 
                     <div>
                         <label for="email"
-                            class="block text-lg font-medium text-gray-900 dark:text-gray-300 mb-2 transition-colors duration-300">Email</label>
+                            class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Your Email</label>
                         <input type="email" id="email" name="email" required
-                            class="w-full bg-white/50 dark:bg-white/5 border border-gray-300 dark:border-white/10 rounded-2xl px-5 py-3 text-gray-800 dark:text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:bg-white dark:focus:bg-white/10 transition-all duration-300 shadow-sm"
+                            class="w-full bg-white dark:bg-white/5 border border-gray-300 dark:border-white/10 rounded-xl px-4 py-3 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-all"
                             placeholder="john@example.com">
                     </div>
 
                     <div>
                         <label for="message"
-                            class="block text-lg font-medium text-gray-900 dark:text-gray-300 mb-2 transition-colors duration-300">Message</label>
-                        <textarea id="message" name="message" required rows="5"
-                            class="w-full bg-white/50 dark:bg-white/5 border border-gray-300 dark:border-white/10 rounded-2xl px-5 py-3 text-gray-800 dark:text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:bg-white dark:focus:bg-white/10 transition-all duration-300 resize-none shadow-sm"
-                            placeholder="Tulis pesan Anda di sini..."></textarea>
+                            class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Your
+                            Message</label>
+                        <textarea id="message" name="message" required rows="4"
+                            class="w-full bg-white dark:bg-white/5 border border-gray-300 dark:border-white/10 rounded-xl px-4 py-3 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-all resize-none"
+                            placeholder="Write your message here..."></textarea>
                     </div>
 
                     <button type="submit"
-                        class="w-full bg-[#163a8a] hover:bg-blue-700 text-white font-medium px-8 py-4 rounded-full transition-all duration-300 shadow-[0_4px_20px_rgba(22,58,138,0.4)] hover:shadow-[0_4px_25px_rgba(22,58,138,0.6)]">
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3.5 rounded-xl transition-all duration-300 shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50">
                         Send Message
                     </button>
-
                 </form>
             </div>
 
         </div>
     </section>
 
-    <!-- section portofolio -->
-    <section id="portofolio" class="relative z-10 max-w-7xl mx-auto px-4 md:px-6 py-24 w-full scroll-mt-32">
+    <!-- Footer -->
+    <footer
+        class="relative z-10 border-t border-gray-200 dark:border-white/10 py-8 text-center text-sm text-gray-500 dark:text-gray-400">
+        <p>© 2026 Daffa Lutfianudin. All rights reserved.</p>
+    </footer>
 
-        <h2
-            class="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-900 dark:text-white transition-colors duration-300">
-            Portofolio Project
-        </h2>
-
-        <div
-            class="bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-white/60 dark:border-white/20 rounded-3xl p-4 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.4)] relative overflow-hidden transition-all duration-300">
-
-            <div id="portofolio-scroll" class="flex overflow-x-auto gap-4 md:gap-6 pb-8 pt-4 hide-scroll-bar">
-
-                <!-- CARD 1: DANGEROUS CLUB -->
-                <div
-                    class="flex-none w-[260px] sm:w-[300px] md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] bg-gradient-to-br from-purple-100 to-blue-50 dark:bg-gradient-to-b dark:from-[#1b2341] dark:to-[#241042] p-5 rounded-2xl border border-white dark:border-white/10 hover:-translate-y-2 transition-all duration-300 shadow-lg dark:shadow-none flex flex-col">
-
-                    <div
-                        class="w-full h-40 bg-white/50 dark:bg-gray-800 rounded-xl mb-4 overflow-hidden relative group border border-white/50 dark:border-white/5 flex items-center justify-center transition-colors duration-300 flex-shrink-0">
-                        <img src="assets\DC.png" alt="Dangerous Club"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-
-                    <div
-                        class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed flex-grow transition-colors duration-300">
-                        <p class="mb-2 text-justify">Sebuah club interaktif dengan sistem hiburan tingkat lanjut.
-                            Dibangun
-                            menggunakan <strong>Luau scripting</strong> untuk logika sistem dan sinkronisasi, serta
-                            desain
-                            GUI kustom.</p>
-                        <ul class="list-disc list-inside space-y-1 ml-1 text-xs sm:text-sm">
-                            <li>Sistem Tari Sinkron & Pemutar Musik</li>
-                            <li>Pencahayaan dinamis & Kamera Drone</li>
-                            <li>Sistem Kasino & Ruang VIP Eksklusif</li>
-                            <li>Layar Kustom Interaktif</li>
-                        </ul>
-                    </div>
-
-                    <div
-                        class="h-[2px] w-full bg-gradient-to-r from-purple-400 to-blue-500 dark:from-purple-500 dark:to-blue-600 my-4 flex-shrink-0">
-                    </div>
-
-                    <div class="flex-shrink-0">
-                        <h4
-                            class="text-sm font-semibold text-gray-900 dark:text-gray-200 mb-1 transition-colors duration-300">
-                            Project Link</h4>
-                        <a href="https://www.roblox.com/id/games/119104656867067/DANGEROUS-CLUB-18"
-                            class="text-sm text-blue-600 dark:text-gray-400 hover:text-blue-800 dark:hover:text-blue-400 transition-colors break-all">www.roblox.com/id/games/...</a>
-                    </div>
-                </div>
-
-                <!-- CARD 2: MOUNT JAGATAMU -->
-                <div
-                    class="flex-none w-[260px] sm:w-[300px] md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] bg-gradient-to-br from-purple-100 to-blue-50 dark:bg-gradient-to-b dark:from-[#1b2341] dark:to-[#241042] p-5 rounded-2xl border border-white dark:border-white/10 hover:-translate-y-2 transition-all duration-300 shadow-lg dark:shadow-none flex flex-col">
-
-                    <div
-                        class="w-full h-40 bg-white/50 dark:bg-gray-800 rounded-xl mb-4 overflow-hidden relative group border border-white/50 dark:border-white/5 flex items-center justify-center transition-colors duration-300 flex-shrink-0">
-                        <img src="assets\MJ.png" alt="Mount Jagatamu"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-
-                    <div
-                        class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed flex-grow transition-colors duration-300">
-                        <p class="mb-2 text-justify">Mount eksklusif berwujud roh pelindung dari Kuil Tersembunyi.
-                            Dikembangkan menggunakan <strong>3D Modeling (Blender)</strong> dan integrasi sistem
-                            pergerakan
-                            kustom.</p>
-                        <ul class="list-disc list-inside space-y-1 ml-1 text-xs sm:text-sm">
-                            <li>Desain Visual 3D jubah bermotif Sakura</li>
-                            <li>Efek Partikel Api Biru Mistis (Hitodama)</li>
-                            <li>Mekanisme <i>Riding</i> (Mount System)</li>
-                            <li>Animasi pergerakan yang mulus</li>
-                        </ul>
-                    </div>
-
-                    <div
-                        class="h-[2px] w-full bg-gradient-to-r from-purple-400 to-blue-500 dark:from-purple-500 dark:to-blue-600 my-4 flex-shrink-0">
-                    </div>
-
-                    <div class="flex-shrink-0">
-                        <h4
-                            class="text-sm font-semibold text-gray-900 dark:text-gray-200 mb-1 transition-colors duration-300">
-                            Project Link</h4>
-                        <a href="https://www.roblox.com/games/74927519912981/MOUNT-JAGATAMU-V1"
-                            class="text-sm text-blue-600 dark:text-gray-400 hover:text-blue-800 dark:hover:text-blue-400 transition-colors break-all">www.roblox.com/games/74927519...</a>
-                    </div>
-                </div>
-
-                <!-- CARD 3: JURASSIC OBSTACLE -->
-                <div
-                    class="flex-none w-[260px] sm:w-[300px] md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] bg-gradient-to-br from-purple-100 to-blue-50 dark:bg-gradient-to-b dark:from-[#1b2341] dark:to-[#241042] p-5 rounded-2xl border border-white dark:border-white/10 hover:-translate-y-2 transition-all duration-300 shadow-lg dark:shadow-none flex flex-col">
-
-                    <div
-                        class="w-full h-40 bg-white/50 dark:bg-gray-800 rounded-xl mb-4 overflow-hidden relative group border border-white/50 dark:border-white/5 flex items-center justify-center transition-colors duration-300 flex-shrink-0">
-                        <img src="assets\JS.png" alt="Jurassic Obstacle"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-
-                    <div
-                        class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed flex-grow transition-colors duration-300">
-                        <p class="mb-2 text-justify">Game balap rintangan bertema prasejarah liar di area pegunungan
-                            raksasa. Menitikberatkan pada desain level dan mekanika fisika kendaraan menggunakan
-                            <strong>Luau</strong>.
-                        </p>
-                        <ul class="list-disc list-inside space-y-1 ml-1 text-xs sm:text-sm">
-                            <li>Trek Balap Gunung Prasejarah & Gua Misterius</li>
-                            <li>Sistem Balapan Multiplayer Interaktif</li>
-                            <li>Jalan Pintas Rahasia & Rintangan Dinamis</li>
-                        </ul>
-                    </div>
-
-                    <div
-                        class="h-[2px] w-full bg-gradient-to-r from-purple-400 to-blue-500 dark:from-purple-500 dark:to-blue-600 my-4 flex-shrink-0">
-                    </div>
-
-                    <div class="flex-shrink-0">
-                        <h4
-                            class="text-sm font-semibold text-gray-900 dark:text-gray-200 mb-1 transition-colors duration-300">
-                            Project Link</h4>
-                        <a href="https://www.roblox.com/games/101174909955302/JURASSIC-OBSTACLE"
-                            class="text-sm text-blue-600 dark:text-gray-400 hover:text-blue-800 dark:hover:text-blue-400 transition-colors break-all">www.roblox.com/games/10117490...</a>
-                    </div>
-                </div>
-
-                <!-- CARD 4: LET'S PARTY -->
-                <div
-                    class="flex-none w-[260px] sm:w-[300px] md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] bg-gradient-to-br from-purple-100 to-blue-50 dark:bg-gradient-to-b dark:from-[#1b2341] dark:to-[#241042] p-5 rounded-2xl border border-white dark:border-white/10 hover:-translate-y-2 transition-all duration-300 shadow-lg dark:shadow-none flex flex-col">
-
-                    <div
-                        class="w-full h-40 bg-white/50 dark:bg-gray-800 rounded-xl mb-4 overflow-hidden relative group border border-white/50 dark:border-white/5 flex items-center justify-center transition-colors duration-300 flex-shrink-0">
-                        <img src="assets\LP.png" alt="Let's Party"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-
-                    <div
-                        class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed flex-grow transition-colors duration-300">
-                        <p class="mb-2 text-justify">Menghadirkan nuansa Beach Club tropis dengan visual yang memanjakan
-                            mata. Map ini dirancang dengan fokus pada pencahayaan lingkungan dan integrasi <strong>3D
-                                Modeling</strong>.</p>
-                        <ul class="list-disc list-inside space-y-1 ml-1 text-xs sm:text-sm">
-                            <li>Desain Lingkungan Beach Club Estetik</li>
-                            <li>Sistem Pencahayaan (Lighting) Atmosferik</li>
-                            <li>Integrasi UI/GUI Interaktif</li>
-                            <li>Area Bersantai & Hiburan Virtual</li>
-                        </ul>
-                    </div>
-
-                    <div
-                        class="h-[2px] w-full bg-gradient-to-r from-purple-400 to-blue-500 dark:from-purple-500 dark:to-blue-600 my-4 flex-shrink-0">
-                    </div>
-
-                    <div class="flex-shrink-0">
-                        <h4
-                            class="text-sm font-semibold text-gray-900 dark:text-gray-200 mb-1 transition-colors duration-300">
-                            Project Link</h4>
-                        <a href="https://www.roblox.com/games/126237450336120/LETS-PARTY-18"
-                            class="text-sm text-blue-600 dark:text-gray-400 hover:text-blue-800 dark:hover:text-blue-400 transition-colors break-all">www.roblox.com/games/12623745...</a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- section Skill -->
-    <section id="skill" class="relative z-10 max-w-6xl mx-auto px-6 py-24 w-full scroll-mt-32">
-
-        <div
-            class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-900/10 blur-[100px] rounded-full pointer-events-none">
-        </div>
-
-        <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">Skill & Education</h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0 mb-16 relative">
-
-            <div class="md:border-r border-white/20 pb-10 md:pb-0 md:pr-12">
-
-                <div class="mb-10">
-                    <h3 class="text-2xl font-bold mb-4">Education</h3>
-                    <ul class="space-y-3 text-gray-700 dark:text-gray-300 list-disc list-inside marker:text-purple-500">
-                        <li>SMA Sinar Islam Asia Pasific</li>
-                        <li>University Amikom Purwokerto</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="text-2xl font-bold mb-4">Experience</h3>
-                    <ul class="space-y-4 text-gray-300 list-disc list-inside marker:text-purple-500">
-                        <li class="leading-relaxed">
-                            <span class="text-gray-700 dark:text-gray-300 font-medium">Desainer Grafis Freelance</span>
-                            <br>
-                            <span class="text-sm text-gray-700 dark:text-gray-300 ml-6">(Januari 2025 - Juli
-                                2025)</span>
-                        </li>
-                        <li class="leading-relaxed">
-                            <span class="text-gray-700 dark:text-gray-300 font-medium">Social Media Specialist Part Time
-                                - BCD Studio Creative
-                                Workshop</span> <br>
-                            <span class="text-sm text-gray-700 dark:text-gray-300 ml-6">(Juli 2025 - Desember
-                                2025)</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="md:pl-12">
-
-                <div class="mb-10">
-                    <h3 class="text-2xl font-bold mb-4">Technical Skill</h3>
-                    <div
-                        class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-4 flex gap-4 items-center flex-wrap max-w-sm">
-
-                        <a href="https://www.adobe.com/products/photoshop.html" target="_blank"
-                            class="w-12 h-12 bg-[#001e36] text-[#31a8ff] border border-[#31a8ff]/30 rounded-xl flex items-center justify-center font-bold text-xl shadow-lg hover:scale-110 hover:-translate-y-1 transition-all duration-300">Ps</a>
-
-                        <a href="https://www.figma.com/" target="_blank"
-                            class="w-12 h-12 bg-[#2c2c2c] rounded-xl flex items-center justify-center shadow-lg overflow-hidden p-2 hover:scale-110 hover:-translate-y-1 transition-all duration-300">
-                            <div class="flex flex-col gap-0.5 w-full h-full">
-                                <div class="flex gap-0.5 h-1/3">
-                                    <div class="w-1/2 bg-[#f24e1e] rounded-tl-full rounded-bl-full"></div>
-                                    <div
-                                        class="w-1/2 bg-[#ff7262] rounded-tr-full rounded-br-full border-l border-[#2c2c2c]">
-                                    </div>
-                                </div>
-                                <div class="flex gap-0.5 h-1/3">
-                                    <div class="w-1/2 bg-[#a259ff] rounded-tl-full rounded-bl-full"></div>
-                                    <div class="w-1/2 bg-[#1abcfe] rounded-full border border-[#2c2c2c]"></div>
-                                </div>
-                                <div class="flex gap-0.5 h-1/3">
-                                    <div class="w-1/2 bg-[#0acf83] rounded-full rounded-tr-none"></div>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="https://www.coreldraw.com/" target="_blank"
-                            class="w-12 h-12 bg-green-900/40 text-green-400 border border-green-500/30 rounded-xl flex items-center justify-center shadow-lg hover:scale-110 hover:-translate-y-1 transition-all duration-300">
-                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z">
-                                </path>
-                            </svg>
-                        </a>
-
-                        <a href="https://create.roblox.com/" target="_blank"
-                            class="w-12 h-12 bg-white text-black rounded-xl flex items-center justify-center shadow-lg font-black text-2xl rotate-12 hover:rotate-0 hover:scale-110 transition-all duration-300">
-                            <div class="w-5 h-5 border-4 border-black border-t-0 border-l-0 transform -rotate-45"></div>
-                        </a>
-
-                        <a href="https://www.blender.org/" target="_blank"
-                            class="w-12 h-12 bg-gray-800 border border-orange-500/30 text-orange-500 rounded-xl flex items-center justify-center shadow-lg font-bold text-xl hover:scale-110 hover:-translate-y-1 transition-all duration-300">Bl</a>
-                    </div>
-                </div>
-
-                <div>
-                    <h3 class="text-2xl font-bold mb-4">Skill Set</h3>
-                    <ul class="space-y-3 text-gray-700 dark:text-gray-300 list-disc list-inside marker:text-purple-500">
-                        <li>Web Development</li>
-                        <li>Game Development (Roblox)</li>
-                        <li>Fivem Handling and Modder</li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-
-        <div
-            class="bg-white/5 backdrop-blur-xl border border-white/20 rounded-3xl p-8 md:p-10 shadow-[0_8px_32px_0_rgba(0,0,0,0.4)]">
-            <h3 class="text-2xl font-bold mb-8">Skill Level</h3>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-
-                <div class="space-y-5">
-                    <h4 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">Web Dev</h4>
-                    <div>
-                        <div class="flex justify-between text-xs font-medium mb-1"><span
-                                class="text-gray-700 dark:text-gray-300">Laravel</span></div>
-                        <div class="w-full bg-gray-700 h-4 rounded-full overflow-hidden">
-                            <div
-                                class="bg-[#e02424] h-full rounded-full w-[80%] flex items-center justify-end px-2 text-[10px] font-bold text-white">
-                                80%</div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between text-xs font-medium mb-1"><span
-                                class="text-gray-700 dark:text-gray-300">Next
-                                Js.</span></div>
-                        <div class="w-full bg-gray-700 h-4 rounded-full overflow-hidden">
-                            <div
-                                class="bg-[#1c64f2] h-full rounded-full w-[85%] flex items-center justify-end px-2 text-[10px] font-bold text-white">
-                                85%</div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between text-xs font-medium mb-1"><span
-                                class="text-gray-700 dark:text-gray-300">CSS</span>
-                        </div>
-                        <div class="w-full bg-gray-700 h-4 rounded-full overflow-hidden">
-                            <div
-                                class="bg-[#31c48d] h-full rounded-full w-[90%] flex items-center justify-end px-2 text-[10px] font-bold text-white">
-                                90%</div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between text-xs font-medium mb-1"><span
-                                class="text-gray-700 dark:text-gray-300">Javascript</span></div>
-                        <div class="w-full bg-gray-700 h-4 rounded-full overflow-hidden">
-                            <div
-                                class="bg-[#e74694] h-full rounded-full w-[85%] flex items-center justify-end px-2 text-[10px] font-bold text-white">
-                                85%</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="space-y-5">
-                    <h4 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">Game Dev</h4>
-                    <div>
-                        <div class="flex justify-between text-xs font-medium mb-1"><span
-                                class="text-gray-700 dark:text-gray-300">Lua</span>
-                        </div>
-                        <div class="w-full bg-gray-700 h-4 rounded-full overflow-hidden">
-                            <div
-                                class="bg-[#e02424] h-full rounded-full w-[90%] flex items-center justify-end px-2 text-[10px] font-bold text-white">
-                                90%</div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between text-xs font-medium mb-1"><span
-                                class="text-gray-700 dark:text-gray-300">Luau</span>
-                        </div>
-                        <div class="w-full bg-gray-700 h-4 rounded-full overflow-hidden">
-                            <div
-                                class="bg-[#1c64f2] h-full rounded-full w-[95%] flex items-center justify-end px-2 text-[10px] font-bold text-white">
-                                95%</div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between text-xs font-medium mb-1"><span
-                                class="text-gray-700 dark:text-gray-300">Roblox
-                                Script</span></div>
-                        <div class="w-full bg-gray-700 h-4 rounded-full overflow-hidden">
-                            <div
-                                class="bg-[#31c48d] h-full rounded-full w-[95%] flex items-center justify-end px-2 text-[10px] font-bold text-white">
-                                95%</div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between text-xs font-medium mb-1"><span
-                                class="text-gray-700 dark:text-gray-300">Javascript</span></div>
-                        <div class="w-full bg-gray-700 h-4 rounded-full overflow-hidden">
-                            <div
-                                class="bg-[#e74694] h-full rounded-full w-[80%] flex items-center justify-end px-2 text-[10px] font-bold text-white">
-                                80%</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="space-y-5">
-                    <h4 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">Design and 3D Modeller</h4>
-                    <div>
-                        <div class="flex justify-between text-xs font-medium mb-1"><span
-                                class="text-gray-700 dark:text-gray-300">Corel</span>
-                        </div>
-                        <div class="w-full bg-gray-700 h-4 rounded-full overflow-hidden">
-                            <div
-                                class="bg-[#e02424] h-full rounded-full w-[75%] flex items-center justify-end px-2 text-[10px] font-bold text-white">
-                                75%</div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between text-xs font-medium mb-1"><span
-                                class="text-gray-700 dark:text-gray-300">Photoshop</span></div>
-                        <div class="w-full bg-gray-700 h-4 rounded-full overflow-hidden">
-                            <div
-                                class="bg-[#1c64f2] h-full rounded-full w-[85%] flex items-center justify-end px-2 text-[10px] font-bold text-white">
-                                85%</div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between text-xs font-medium mb-1"><span
-                                class="text-gray-700 dark:text-gray-300">Blender</span></div>
-                        <div class="w-full bg-gray-700 h-4 rounded-full overflow-hidden">
-                            <div
-                                class="bg-[#31c48d] h-full rounded-full w-[70%] flex items-center justify-end px-2 text-[10px] font-bold text-white">
-                                70%</div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between text-xs font-medium mb-1"><span
-                                class="text-gray-700 dark:text-gray-300">Figma</span>
-                        </div>
-                        <div class="w-full bg-gray-700 h-4 rounded-full overflow-hidden">
-                            <div
-                                class="bg-[#e74694] h-full rounded-full w-[90%] flex items-center justify-end px-2 text-[10px] font-bold text-white">
-                                90%</div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </section>
-
-
-
+    <!-- Scripts -->
     <script>
-        const textArray = ["Web Dev", "Game Dev", "Designer"];
+        // Typing Effect Script
+        const textArray = ["Mobile App Dev", "Web Dev", "C# Desktop Dev", "Game Dev", "UI/UX Designer"];
         let arrayIndex = 0;
         let charIndex = 0;
         const typingTextElement = document.getElementById("typing-text");
@@ -758,15 +735,13 @@
                 if (charIndex < textArray[arrayIndex].length) {
                     typingTextElement.textContent += textArray[arrayIndex].charAt(charIndex);
                     charIndex++;
-                    setTimeout(typeText, 150); // Kecepatan mengetik (dalam ms)
+                    setTimeout(typeText, 120);
                 } else {
-                    // Teks lengkap, jeda, lalu mulai hapus
-                    setTimeout(eraseText, 2500); // Jeda sebelum menghapus
+                    setTimeout(eraseText, 2200);
                 }
             } else {
-                // Loop kembali ke awal
                 arrayIndex = 0;
-                setTimeout(typeText, 500);
+                setTimeout(typeText, 400);
             }
         }
 
@@ -774,41 +749,38 @@
             if (charIndex > 0) {
                 typingTextElement.textContent = textArray[arrayIndex].substring(0, charIndex - 1);
                 charIndex--;
-                setTimeout(eraseText, 150); // Kecepatan menghapus
+                setTimeout(eraseText, 80);
             } else {
-                // Teks dihapus, pindah ke teks berikutnya
                 arrayIndex++;
                 charIndex = 0;
                 typeText();
             }
         }
 
-        // Mulai animasi setelah halaman selesai dimuat
         document.addEventListener("DOMContentLoaded", function () {
             typeText();
         });
     </script>
+
     <script>
+        // Dark / Light Theme Toggle
         var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
         var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 
-        // Cek tema yang tersimpan di localStorage, atau ikuti preferensi sistem
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             themeToggleLightIcon.classList.remove('hidden');
-            document.documentElement.classList.add('dark'); // Paksa mode gelap di awal jika preferensinya gelap
+            document.documentElement.classList.add('dark');
         } else {
             themeToggleDarkIcon.classList.remove('hidden');
-            document.documentElement.classList.remove('dark'); // Paksa mode terang
+            document.documentElement.classList.remove('dark');
         }
 
         var themeToggleBtn = document.getElementById('theme-toggle');
 
         themeToggleBtn.addEventListener('click', function () {
-            // Ganti ikon
             themeToggleDarkIcon.classList.toggle('hidden');
             themeToggleLightIcon.classList.toggle('hidden');
 
-            // Logika ganti tema
             if (localStorage.getItem('color-theme')) {
                 if (localStorage.getItem('color-theme') === 'light') {
                     document.documentElement.classList.add('dark');
@@ -828,37 +800,42 @@
             }
         });
     </script>
-    <script>
-        const portofolioScroll = document.getElementById('portofolio-scroll');
 
-        if (portofolioScroll) {
-            portofolioScroll.addEventListener('wheel', function (event) {
-                if (event.deltaY !== 0) {
-                    // Mencegah halaman scroll ke bawah
-                    event.preventDefault();
-
-                    // Menggunakan fungsi scrollBy dengan behavior 'smooth'
-                    portofolioScroll.scrollBy({
-                        left: event.deltaY * 2, // Angka tarikan disesuaikan agar tidak terlalu lambat
-                        behavior: 'smooth' // <--- INI ADALAH KUNCI ANIMASI HALUSNYA
-                    });
-                }
-            }, { passive: false });
-        }
-    </script>
     <script>
+        // Project Filtering Logic
         document.addEventListener('DOMContentLoaded', () => {
-            // 1. Ambil semua section yang ada di web (termasuk main#home)
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    projectCards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+                        if (filterValue === 'all' || cardCategory === filterValue) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+    <script>
+        // Navigation Active Link Observer
+        document.addEventListener('DOMContentLoaded', () => {
             const sections = document.querySelectorAll('main, section');
-            // 2. Ambil semua link yang ada di dalam menu pill (About, Contact, dll)
             const navLinks = document.querySelectorAll('nav div.flex a');
 
-            // Kelas warna saat menu AKTIF (Sama persis dengan warna saat di-hover)
-            const activeClasses = ['text-blue-600', 'dark:text-transparent', 'dark:bg-clip-text', 'dark:bg-gradient-to-r', 'dark:from-purple-500', 'dark:to-blue-600'];
-            // Kelas warna saat menu TIDAK AKTIF (Warna abu-abu default)
+            const activeClasses = ['text-blue-600', 'dark:text-blue-400', 'font-bold'];
             const inactiveClasses = ['text-gray-700', 'dark:text-gray-200'];
 
-            // Setting area pantauan kamera (Aktif saat section menyentuh 1/3 bagian atas layar)
             const observerOptions = {
                 root: null,
                 rootMargin: '-20% 0px -60% 0px',
@@ -867,20 +844,15 @@
 
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    // Jika section sedang terlihat di layar...
                     if (entry.isIntersecting) {
                         const currentId = entry.target.getAttribute('id');
 
-                        // Periksa semua link di menu
                         navLinks.forEach(link => {
-                            // Jika href link sama dengan id section yang tampil (#about == about)
                             if (link.getAttribute('href') === `#${currentId}`) {
-                                // Buat link menjadi aktif (menyala)
                                 link.classList.remove(...inactiveClasses);
                                 link.classList.add(...activeClasses);
                             } else {
-                                // Matikan link lainnya
-                                link.classList.remove(...activeClasses);
+                                link.classList.remove(...inactiveClasses);
                                 link.classList.add(...inactiveClasses);
                             }
                         });
@@ -888,7 +860,6 @@
                 });
             }, observerOptions);
 
-            // Pasang mata-mata (observer) ke setiap section
             sections.forEach(section => {
                 if (section.getAttribute('id')) {
                     observer.observe(section);
